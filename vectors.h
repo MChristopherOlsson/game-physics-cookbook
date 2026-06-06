@@ -61,4 +61,13 @@ bool operator!=(const vec3& l, const vec3& r);
 float Dot(const vec2& l, const vec2& r);
 float Dot(const vec3& l, const vec3& r);
 
+float Magnitude(const vec2& v);
+float Magnitude(const vec3& v);
+
+float MagnitudeSq(const vec2& v);
+float MagnitudeSq(const vec3& v);
+
+float Distance(const vec2& p1, const vec2& p2);
+float Distance(const vec3& p1, const vec3& p2);
+
 #endif
