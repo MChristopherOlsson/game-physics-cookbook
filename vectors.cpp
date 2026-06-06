@@ -90,3 +90,19 @@ float Distance(const vec3& p1, const vec3& p2) {
   vec3 t = p1 - p2;
   return Magnitude(t);
 }
+
+void Normalize(vec2& v) {
+  v = v * (1.0f / Magnitude(v));
+}
+
+void Normalize(vec3& v) {
+  v = v * (1.0f / Magnitude(v));
+}
+
+vec2 Normalized(const vec2& v) {
+  return v * (1.0f / Magnitude(v));
+}
+
+vec3 Normalized(const vec3& v) {
+  return v * (1.0f / Magnitude(v));
+}

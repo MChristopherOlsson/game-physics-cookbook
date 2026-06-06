@@ -70,4 +70,10 @@ float MagnitudeSq(const vec3& v);
 float Distance(const vec2& p1, const vec2& p2);
 float Distance(const vec3& p1, const vec3& p2);
 
+void Normalize(vec2& v);
+void Normalize(vec3& v);
+
+vec2 Normalized(const vec2& v);
+vec3 Normalized(const vec3& v);
+
 #endif
