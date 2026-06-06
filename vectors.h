@@ -76,4 +76,6 @@ void Normalize(vec3& v);
 vec2 Normalized(const vec2& v);
 vec3 Normalized(const vec3& v);
 
+vec3 Cross(const vec3& l, const vec3& r);
+
 #endif
