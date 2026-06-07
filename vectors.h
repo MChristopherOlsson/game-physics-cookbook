@@ -1,6 +1,10 @@
 #ifndef _H_MATH_VECTORS_
 #define _H_MATH_VECTORS_
 
+// Macros
+#define RAD2DEG(x) ((x) * 57.295754f)
+#define DEG2RAD(x) ((x) * 0.0174533f)
+
 // Structure definitions
 typedef struct vec2 {
   union {
@@ -77,5 +81,8 @@ vec2 Normalized(const vec2& v);
 vec3 Normalized(const vec3& v);
 
 vec3 Cross(const vec3& l, const vec3& r);
+
+float Angle(const vec2&l, const vec2& r);
+float Angle(const vec3&l, const vec3& r);
 
 #endif

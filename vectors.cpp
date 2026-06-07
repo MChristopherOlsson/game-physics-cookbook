@@ -114,3 +114,14 @@ vec3 Cross(const vec3& l, const vec3& r) {
   result.z = l.x * r.y - l.y * r.x;
   return result;
 }
+
+float Angle(const vec2&l, const vec2& r) {
+  float m = sqrtf(MagnitudeSq(l) * MagnitudeSq(r));
+  return acos(Dot(l, r) / m);
+}
+
+float Angle(const vec3&l, const vec3& r) {
+  float m = sqrtf(MagnitudeSq(l) * MagnitudeSq(r));
+  return acos(Dot(l, r) / m);
+}
+
