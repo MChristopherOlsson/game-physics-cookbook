@@ -115,13 +115,43 @@ vec3 Cross(const vec3& l, const vec3& r) {
   return result;
 }
 
-float Angle(const vec2&l, const vec2& r) {
+float Angle(const vec2& l, const vec2& r) {
   float m = sqrtf(MagnitudeSq(l) * MagnitudeSq(r));
   return acos(Dot(l, r) / m);
 }
 
-float Angle(const vec3&l, const vec3& r) {
+float Angle(const vec3& l, const vec3& r) {
   float m = sqrtf(MagnitudeSq(l) * MagnitudeSq(r));
   return acos(Dot(l, r) / m);
+}
+
+vec2 Project(const vec2& len, const vec2& dir) {
+  float dot = Dot(len, dir);
+  float magSq = MagnitudeSq(dir);
+  return dir * (dot / magSq);
+}
+
+vec3 Project(const vec3& len, const vec3& dir) {
+  float dot = Dot(len, dir);
+  float magSq = MagnitudeSq(dir);
+  return dir * (dot / magSq);
+}
+
+vec2 Perpendicular(const vec2& len, const vec2& dir) {
+  return len - Project(len, dir);
+}
+
+vec3 Perpendicular(const vec3& len, const vec3& dir) {
+  return len - Project(len, dir);
+}
+
+vec2 Reflection(const vec2& vec, const vec2& normal) {
+  float dot = Dot(vec, normal);
+  return vec - normal * (dot * 2.0f);
+}
+
+vec3 Reflection(const vec3& vec, const vec3& normal) {
+  float dot = Dot(vec, normal);
+  return vec - normal * (dot * 2.0f);
 }
 

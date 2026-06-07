@@ -65,7 +65,20 @@ int main() {
   vec2 b(0.0f, 1.0f);
   float radAngle = Angle(a, b);
   float degAngle = RAD2DEG(radAngle);
-  std::cout << "The angle between a: " << str(a) << " and b: " << str(b) << " is: \n" << "rad: " << radAngle << "\ndeg: " << degAngle;
+  std::cout << "The angle between a: " << str(a) << " and b: " << str(b) << " is: \n" << "rad: " << radAngle << "\ndeg: " << degAngle << "\n\n";
+
+
+  // Reflection
+  std::cout << "------REFLECTION------\n";
+  vec2 dir2(3.0f, -2.0f);
+  vec2 surfNor2(0.0f, 1.0f);
+  vec2 newdir2 = Reflection(dir2, surfNor2);
+  std::cout << "2D Dir: " << str(dir2) << " bouncing on surface normal : " << str(surfNor2) << " results in new direction: " << str(newdir2) << "\n";
+
+  vec3 dir3(3.0f, -2.0f, 5.0f);
+  vec3 surfNor3(0.0f, 1.0f, 0.0f);
+  vec3 newdir3 = Reflection(dir3, surfNor3);
+  std::cout << "3D Dir: " << str(dir3) << " bouncing on surface normal : " << str(surfNor3) << " results in new direction: " << str(newdir3) << "\n";
 
   return 0;
 }
